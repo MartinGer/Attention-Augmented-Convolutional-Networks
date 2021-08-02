@@ -48,7 +48,7 @@ def main():
                         help='Number of heads in attention layers.')
     parser.add_argument('--k', default=2, type=float,
                         help='K')
-    parser.add_argument('--v', default=0.25, type=float,
+    parser.add_argument('--v', default=0.2, type=float,
                         help='V')
     parser.add_argument('--name', default="", type=str,
                         help='Add a name ending to saved model and log file.')
