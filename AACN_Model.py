@@ -55,7 +55,7 @@ class BasicBlock(nn.Module):
         if not attention:
             self.conv2 = conv3x3(planes, planes)
         else:
-            self.conv2 = AACN_Layer(in_channels=width, out_channels=width, k=k, v=v, kernel_size=3, num_heads=8, image_size=image_size, inference=inference)
+            self.conv2 = AACN_Layer(in_channels=width, out_channels=width, k=k, v=v, kernel_size=3, num_heads=num_heads, image_size=image_size, inference=inference)
         self.bn2 = norm_layer(planes)
         self.downsample = downsample
         self.stride = stride
@@ -115,7 +115,7 @@ class Bottleneck(nn.Module):
         if not attention:
             self.conv2 = conv3x3(planes, planes)
         else:
-            self.conv2 = AACN_Layer(in_channels=width, k=k, v=v, kernel_size=3, num_heads=8, image_size=image_size, inference=inference)
+            self.conv2 = AACN_Layer(in_channels=width, k=k, v=v, kernel_size=3, num_heads=num_heads, image_size=image_size, inference=inference)
         self.bn2 = norm_layer(width)
         self.conv3 = conv1x1(width, planes * self.expansion)
         self.bn3 = norm_layer(planes * self.expansion)
