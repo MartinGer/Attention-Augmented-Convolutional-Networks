@@ -12,6 +12,8 @@ is the ratio of attentional channels to number of original output filters
 * ![k](https://user-images.githubusercontent.com/19909320/119885316-f9316a00-bf31-11eb-96e4-97134fc0dfb1.png) 
 is the ratio of key depth to number of original output filters
 
+![AACN](https://user-images.githubusercontent.com/19909320/137499701-4cace468-ffa5-4b2e-b15f-14d2ddee4fbf.png)
+
 ## Implementation details
 I only tested the implementation with ResNet50 for now. The used ResNet V1.5 architectures are adapted from https://github.com/pytorch/vision/blob/master/torchvision/models/resnet.py
 
